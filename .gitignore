@@ -1,3 +1,17 @@
+# Speedscale
+speedscale-docker-capture.yaml
+speedscale-docker-replay.yaml
+
+# Spring Boot
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### VS Code ###
+.vscode/
+
 # Compiled class file
 *.class
 

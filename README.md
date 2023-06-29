@@ -1,1 +1,3 @@
-# spaceboot
+# Space Boot
+
+Basic Java application.
