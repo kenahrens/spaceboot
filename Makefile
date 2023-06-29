@@ -18,7 +18,7 @@ all: build
 build:
 	docker buildx build \
 		-f $(CWD)/Dockerfile \
-		$(if $(CI),--platform $(PLATFORMS) --push,) \
+		--platform $(PLATFORMS) --push \
 		--tag $(REPO)$(IMAGE_SUFFIX):$(VERSION) \
 		--build-arg VERSION=$(VERSION) \
 		$(CWD)
