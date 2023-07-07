@@ -139,7 +139,7 @@ spec:
         mountPath: /tmp
       resources:
         requests:
-          memory: 12Gi
+          memory: 3Gi
           cpu: 4
           ephemeral-storage: 2Gi
     #20 minutes
