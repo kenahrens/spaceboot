@@ -9,6 +9,7 @@ You can run this using Pipekit:
 3. Install the [pre-requisites](#pre-requisites) listed below into the cluster.
 4. Create a new Pipe in Pipekit and reference `pipekit/workflow.yml` as the workflow file.
 5. Set appropriate [Run Conditions](https://docs.pipekit.io/pipekit/pipes/managing-pipes/run-conditions) to trigger the Pipe.
+6. Set up Container Repo secrets if you wish to push.
 
 ## Pre-Requisites
 Your cluster will require the following to be installed:
