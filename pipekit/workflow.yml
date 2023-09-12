@@ -25,7 +25,11 @@ spec:
       - name: git_branch
         value: 'main'
       - name: push_image
-        value: 'false'
+        value: 'true'
+      - name: docker_image
+        value: "ghcr.io/speedscale-demos/spaceboot"
+      - name: docker_tag
+        value: "pipekit-latest"
   entrypoint: main
   templates:
   - name: main
@@ -58,7 +62,7 @@ spec:
           git config --global --add safe.directory /workdir/{{workflow.parameters.gh_repo}}
           git config --global user.email "sales@pipekit.io"
           git config --global user.name "Tim Collins"
-          
+
           if [ -z "$GIT_COMMIT" ]
           then
             echo "No branch specified via Pipekit, fall back to workflow param"
@@ -86,12 +90,10 @@ spec:
         - sh
         - -c
         - |
-          echo "The docker username is: ${DOCKER_USERNAME}"
-          echo "----"
-          AUTH=$(echo -n "${DOCKER_USERNAME}:${DOCKER_PASSWORD}" | base64);
+          AUTH=$(echo -n "${DOCKER_KEY}" | base64);
           echo """{
               \"auths\": {
-                  \"https://index.docker.io/v1/\": {
+                  \"gcr.io\": {
                       \"auth\": \"${AUTH}\"
                   }
               }
@@ -122,9 +124,17 @@ spec:
           --local \
           dockerfile=/tmp/workdir/{{workflow.parameters.gh_repo}} \
           --opt filename=Dockerfile \
-          --opt platform=linux/amd64,linux/arm64 \
+          --opt platform=linux/amd64 \
+          --export-cache \
+          type=registry,ref={{workflow.parameters.docker_image}}:pipekit-buildcache,mode=max,ignore-error=true \
+          --export-cache \
+          --import-cache \
+          type=registry,ref={{workflow.parameters.docker_image}}:pipekit-buildcache \
+          --import-cache \
+          type=registry,ref={{workflow.parameters.docker_image}}:{{workflow.parameters.docker_tag}} \
+          type=inline \
           --output \
-          type=image,name=ghcr.io/speedscale-demos/spaceboot:latest,push={{workflow.parameters.push_image}}
+          type=image,name={{workflow.parameters.docker_image}}:{{workflow.parameters.docker_tag}},push={{workflow.parameters.push_image}}
       env:
         - name: DOCKER_CONFIG
           value: /buildkit/.docker
