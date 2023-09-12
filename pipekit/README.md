@@ -9,7 +9,7 @@ You can run this using Pipekit:
 3. Install the [pre-requisites](#pre-requisites) listed below into the cluster.
 4. Create a new Pipe in Pipekit and reference `pipekit/workflow.yml` as the workflow file.
 5. Set appropriate [Run Conditions](https://docs.pipekit.io/pipekit/pipes/managing-pipes/run-conditions) to trigger the Pipe.
-6. Set up Container Repo secrets if you wish to push. You will need to call the secret `DOCKER_KEY` and it will need to contain the contents of your [JSON key file](https://cloud.google.com/container-registry/docs/advanced-authentication#json-key).
+6. Set up Container Repo secrets if you wish to push. You will need to call the secret `DOCKER_KEY` and it will need to contain the contents of your [JSON key file](https://cloud.google.com/container-registry/docs/advanced-authentication#json-key). A reminder: once you have created your secret in the Pipekit UI, you need to ensure that the secret environment is being used by the Run Condition, and then the PR will need to be re-triggered with a new commit to pick up the change.
 
 ## Pre-Requisites
 Your cluster will require the following to be installed:
