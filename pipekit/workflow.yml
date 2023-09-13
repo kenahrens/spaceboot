@@ -90,7 +90,7 @@ spec:
         - sh
         - -c
         - |
-          AUTH=$(echo -n "_json_key:${DOCKER_KEY}" | base64);
+          AUTH=$(echo -n "_json_key:${tim_secret}" | base64);
           echo """{
               \"auths\": {
                   \"gcr.io\": {
@@ -98,6 +98,9 @@ spec:
                   }
               }
           }""" >> /buildkit/.docker/config.json
+
+
+          cat /buildkit/.docker/config.json
       volumeMounts:
       - name: "workdir"
         mountPath: /buildkit/.docker
