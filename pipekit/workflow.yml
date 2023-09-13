@@ -99,8 +99,7 @@ spec:
               }
           }""" >> /buildkit/.docker/config.json
 
-
-          cat /buildkit/.docker/config.json
+          echo "${tim_secret}"
       volumeMounts:
       - name: "workdir"
         mountPath: /buildkit/.docker
