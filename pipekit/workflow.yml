@@ -27,7 +27,7 @@ spec:
       - name: push_image
         value: 'true'
       - name: docker_image
-        value: "ghcr.io/speedscale-demos/spaceboot"
+        value: "gcr.io/speedscale-demos/spaceboot"
       - name: docker_tag
         value: "pipekit-latest"
   entrypoint: main
