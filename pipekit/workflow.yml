@@ -90,7 +90,7 @@ spec:
         - sh
         - -c
         - |
-          AUTH=$(echo -n "${DOCKER_KEY}" | base64);
+          AUTH=$(echo -n _json_key:${DOCKER_KEY} | base64);
           echo """{
               \"auths\": {
                   \"gcr.io\": {
@@ -127,8 +127,7 @@ spec:
           --opt platform=linux/amd64 \
           --export-cache \
           type=registry,ref={{workflow.parameters.docker_image}}:pipekit-buildcache,mode=max,ignore-error=true \
-          --export-cache \
-          type=inline \
+          --export-cache type=inline \
           --import-cache \
           type=registry,ref={{workflow.parameters.docker_image}}:pipekit-buildcache \
           --import-cache \
