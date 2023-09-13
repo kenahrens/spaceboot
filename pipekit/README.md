@@ -46,3 +46,5 @@ You can manually install the Pipekit Agent and use this cluster with Pipekit for
 
 ## Issues
 I could not get the amd64 variant to build successfully on my m2 mac. If you also struggle, change the line `--opt platform=linux/amd64,linux/arm64 ` in the workflow to remove the amd64 variant. On an EKS cluster, both built fine so it's some mac-specific issue that I wasn't too concerned about for this POC.
+
+I am a random readme change. Ignore me.
