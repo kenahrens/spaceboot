@@ -128,11 +128,11 @@ spec:
           --export-cache \
           type=registry,ref={{workflow.parameters.docker_image}}:pipekit-buildcache,mode=max,ignore-error=true \
           --export-cache \
+          type=inline \
           --import-cache \
           type=registry,ref={{workflow.parameters.docker_image}}:pipekit-buildcache \
           --import-cache \
           type=registry,ref={{workflow.parameters.docker_image}}:{{workflow.parameters.docker_tag}} \
-          type=inline \
           --output \
           type=image,name={{workflow.parameters.docker_image}}:{{workflow.parameters.docker_tag}},push={{workflow.parameters.push_image}}
       env:
