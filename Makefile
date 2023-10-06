@@ -22,3 +22,5 @@ build:
 		--tag $(REPO)$(IMAGE_SUFFIX):$(VERSION) \
 		--build-arg VERSION=$(VERSION) \
 		$(CWD)
+	docker tag $(REPO)$(IMAGE_SUFFIX):$(VERSION) $(REPO)$(IMAGE_SUFFIX):latest
+	docker push $(REPO)$(IMAGE_SUFFIX):latest
