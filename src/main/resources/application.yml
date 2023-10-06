@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: "Space Boot"
+
+spacexBaseURL: https://api.spacexdata.com

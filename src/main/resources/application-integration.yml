@@ -1,0 +1,8 @@
+wiremock-config:
+  proxies:
+    - name: spacex
+      port: 9081
+      url: https://api.spacexdata.com
+      recording: false
+
+spacexBaseURL: http://localhost:9081

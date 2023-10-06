@@ -15,6 +15,11 @@ public class SpaceController {
     
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
+    private final SpaceXService spacex;
+
+    public SpaceController(SpaceXService spacex) {
+        this.spacex = spacex;
+    }
 
     @GetMapping("/")
     public String home() {
@@ -34,10 +39,10 @@ public class SpaceController {
     }
 
     @GetMapping("/space")
-    String space() {
+    public String space() {
         String rspBody = "{}";
         try {
-            rspBody = SpaceXHelper.invoke();
+            rspBody = spacex.launches();
         } catch (Exception e) {
             logger.error("Exception calling SpaceX", e);
             rspBody = "{\"exception\": \"" + e.getMessage() + "\"}";
