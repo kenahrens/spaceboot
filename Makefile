@@ -22,5 +22,9 @@ build:
 		--tag $(REPO)$(IMAGE_SUFFIX):$(VERSION) \
 		--build-arg VERSION=$(VERSION) \
 		$(CWD)
-	docker tag $(REPO)$(IMAGE_SUFFIX):$(VERSION) $(REPO)$(IMAGE_SUFFIX):latest
-	docker push $(REPO)$(IMAGE_SUFFIX):latest
+	docker buildx build \
+		-f $(CWD)/Dockerfile \
+		$(if $(CI),--platform $(PLATFORMS) --push,) \
+		--tag $(REPO)$(IMAGE_SUFFIX):latest \
+		--build-arg VERSION=latest \
+		$(CWD)
