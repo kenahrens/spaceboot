@@ -17,7 +17,7 @@ import com.github.tomakehurst.wiremock.common.ConsoleNotifier;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 
 
-@ActiveProfiles(value = "integration")
+@ActiveProfiles(value = "unit")
 @SpringBootTest(classes = SpacebootApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @AutoConfigureMockMvc
 public class SpaceXTest {
@@ -34,14 +34,12 @@ public class SpaceXTest {
                 .notifier(new ConsoleNotifier(true))
         );
         wireMockServer.start();
-        System.out.println("Stub mapping size: " + wireMockServer.getStubMappings().size());
     }
 
     @AfterEach
     void stopRecording() {
         wireMockServer.stop();
     }
-
 
     @Test
     void getLaunches() throws Exception {

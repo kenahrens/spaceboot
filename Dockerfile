@@ -8,7 +8,7 @@ RUN mvn -q clean \
 FROM amazoncorretto:20
 
 WORKDIR /usr/src/app
-COPY --from=build /app.jar /app.jar
+COPY --from=build /app.jar /usr/src/app/app.jar
 
 ENV PORT 8080
 EXPOSE $PORT
