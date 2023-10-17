@@ -38,6 +38,18 @@ public class SpaceController {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
 
+    @GetMapping("/ship")
+    public String ship() {
+        String rspBody = "{}";
+        try {
+            rspBody = spacex.ship();
+        } catch (Exception e) {
+            logger.error("Exception calling SpaceX", e);
+            rspBody = "{\"exception\": \"" + e.getMessage() + "\"}";
+        }
+        return rspBody;
+    }
+    
     @GetMapping("/space")
     public String space() {
         String rspBody = "{}";

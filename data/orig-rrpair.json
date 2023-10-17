@@ -1,0 +1,142 @@
+{
+    "msgType": "rrpair",
+    "resource": "java-server",
+    "ts": "2023-10-06T20:57:13.160915778Z",
+    "isTls": true,
+    "l7protocol": "https",
+    "duration": 15,
+    "alpn": "h2",
+    "tags": {
+        "captureMode": "proxy",
+        "clientType": "goproxy",
+        "compressed": "gzip",
+        "k8sAppLabel": "java-server",
+        "k8sAppPodName": "java-server-65b8dd8dfb-hxvh5",
+        "k8sAppPodNamespace": "default",
+        "k8sClusterName": "do-prize",
+        "proxyCID": "89416",
+        "proxyId": "java-server-65b8dd8dfb-hxvh5",
+        "proxyLocation": "out",
+        "proxyProtocol": "",
+        "proxyReqAddr": "10.244.1.125:41836",
+        "proxyRespAddr": "172.67.146.218:443",
+        "proxyType": "transparent",
+        "proxyVersion": "v1.3.320",
+        "sequence": "176781",
+        "targetHost": "api.spacexdata.com",
+        "targetPort": "443"
+    },
+    "wireformatSize": 3247,
+    "jsonLength": 3953,
+    "uuid": "X9TGplEMRfCWSFrrFBDahQ==",
+    "direction": "OUT",
+    "cluster": "do-prize",
+    "namespace": "default",
+    "service": "java-server",
+    "tech": "JSON",
+    "network_address": "api.spacexdata.com:443",
+    "command": "GET",
+    "location": "/v5/launches/latest",
+    "status": "200",
+    "http": {
+        "req": {
+            "url": "/v5/launches/latest",
+            "uri": "/v5/launches/latest",
+            "version": "2.0",
+            "method": "GET",
+            "host": "api.spacexdata.com",
+            "headers": {
+                "User-Agent": [
+                    "Java-http-client/20.0.2"
+                ]
+            }
+        },
+        "res": {
+            "contentType": "application/json; charset=utf-8",
+            "statusCode": 200,
+            "statusMessage": "200 OK",
+            "headers": {
+                "Access-Control-Allow-Origin": [
+                    "*"
+                ],
+                "Access-Control-Expose-Headers": [
+                    "spacex-api-cache,spacex-api-response-time"
+                ],
+                "Alt-Svc": [
+                    "h3=\":443\"; ma=86400"
+                ],
+                "Cache-Control": [
+                    "max-age=20"
+                ],
+                "Cf-Cache-Status": [
+                    "DYNAMIC"
+                ],
+                "Cf-Ray": [
+                    "8120d0c13846c452-EWR"
+                ],
+                "Content-Security-Policy": [
+                    "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                ],
+                "Content-Type": [
+                    "application/json; charset=utf-8"
+                ],
+                "Date": [
+                    "Fri, 06 Oct 2023 20:57:13 GMT"
+                ],
+                "Etag": [
+                    "W/\"615-Ip/MG7g0l55a1XAv9G4c6VIZOA8\""
+                ],
+                "Expect-Ct": [
+                    "max-age=0"
+                ],
+                "Nel": [
+                    "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+                ],
+                "Referrer-Policy": [
+                    "no-referrer"
+                ],
+                "Report-To": [
+                    "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=xsNHZUo63Xn%2F8vs7c5jkhxT5ziD%2BCpyuCDKu2zrZvUZtK7EvwMfud2JA7VXDNeOP7lo2Vp2muj5si6fbnpHCm6O5mbQN7UKIOpFF4OAmjkG2j9%2F09LBo76gXLrCMEV%2Br259QIY8%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+                ],
+                "Server": [
+                    "cloudflare"
+                ],
+                "Spacex-Api-Cache": [
+                    "HIT"
+                ],
+                "Spacex-Api-Cache-Online": [
+                    "true"
+                ],
+                "Spacex-Api-Response-Time": [
+                    "0ms"
+                ],
+                "Strict-Transport-Security": [
+                    "max-age=15552000; includeSubDomains"
+                ],
+                "Vary": [
+                    "Origin",
+                    "Accept-Encoding"
+                ],
+                "X-Content-Type-Options": [
+                    "nosniff"
+                ],
+                "X-Dns-Prefetch-Control": [
+                    "off"
+                ],
+                "X-Download-Options": [
+                    "noopen"
+                ],
+                "X-Frame-Options": [
+                    "SAMEORIGIN"
+                ],
+                "X-Permitted-Cross-Domain-Policies": [
+                    "none"
+                ],
+                "X-Xss-Protection": [
+                    "0"
+                ]
+            },
+            "bodyBase64": "H4sIAAAJbogE/3yUX6vbOBOHv0qZayWW/8bWXWl7976wcJbdbUMwsjR2ZiNLRpLrE0K++0IT55ym0Lsw0qMZ/fTEF+glebJDAGFnYxgYsqcA4gKTjOoI4gJhlMaAgGOMUxBJQqMcMGRbGofOvW6VGxPsEl0nn9Ov52XiS+u2kx2AgZF+wN+TeZ5kmJyqv74U9NW0bjvZAa4MPGpNEcQFlBwnSYN9DChnq47v5lmWZXvbvlVuTHwSJqnwNVFuHNHGkLx+H3fVv4m/1VvlcSlbI2erjsrJEFvt1Ins0GoKag6BnG2l1QkwGFGTXDt7VO47+vMtqiuD3pA6+XcZ7Q8MnKeBrDQg9ocrg8ljCCeK6yELdkqG+G7+s5vjvO0wKb8sf9ffTh/9/wpgcHZznDtsSYOAn5ekj6QMrk+20Ikm1CTfHYp2+yhvnR+ShU6UvExS4T/tJ4/LpoQrgxBlJNX25LHVMmI7R7Ve99c1S69rT4sRRC9NQAYLWe2WFfNOnTCCgBIbzXVTopZV0+xyWfNGp6iAQZiVwhBARD8jg16SmT0GEPsDA41RknkIqTwuIPaX+w+oMq13aVNlPMt5lZUlzwqd5goYeGcQBHxy4yitRg9Xdrnzd0w1T5h+w/4g4+IvSJbyp074hvyfQiBnP7xMqEgaCvFD+kvTrMyfZu1/e0IG1wODcKTpHoiSU5jNj3igSneKl2WTdlJnqqpSWWHW8AYODCZ5Nk7qAGJ/SylH/XPnooQDg5v6k9S3R8Ki5Flf8oY3RVrXZVX1dQ0/7B6OsbXz2KEHkdY7BlaOCALuAjF4cwYynmWblG94+WdaCc4F51vO+bfHrh/2pFVVNHVZcX6HjVPSPOGZ4FxwvuGF4HzlJ4+KAjkLAo5u9sBgnpQbyQ4PE5XzGEDsL6CcRxBQ5blutKzyUu5SnepGVdWu2XWP64FIGQyedE/24aPB4eGmxzmgfrhupNVkh1bGiOMU111r+UnstRzPE4KAjy+fX+BWfUs/53me1zmqrmuwzAvcKQXXAwM5R9fOk5YRQUQ/I4PYvZ9kturYGuq89OfbZ6LPc12iwg3WWbkplK43NW/6TaoLtctkhlznwID0+ofgunxys4HrfwMArEpBbBUGAAA="
+        }
+    }
+}

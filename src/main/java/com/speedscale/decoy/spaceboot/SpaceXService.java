@@ -36,6 +36,22 @@ public class SpaceXService {
         this.factory = httpTransport.createRequestFactory();
     }
 
+    public String ship() throws Exception {
+                
+        String shipURL = spacexBaseURL + "/v4/ships/5ea6ed2d080df4000697c901";
+        logger.info("Calling " + shipURL);
+        
+        GenericUrl url = new GenericUrl(shipURL);
+        HttpRequest req = factory.buildGetRequest(url);
+        HttpResponse res = req.execute();
+        InputStream is = res.getContent();
+        String text = new BufferedReader(
+            new InputStreamReader(is, StandardCharsets.UTF_8))
+                .lines()
+                .collect(Collectors.joining("\n"));
+        return text;
+    }
+
     public String launches() throws Exception {
         
         String launchesURL = spacexBaseURL + "/v5/launches/latest";

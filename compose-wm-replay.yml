@@ -3,14 +3,10 @@ services:
     environment:
       - JAVA_TOOL_OPTIONS=
         -Dspring.profiles.active=integration
-        -Djavax.net.ssl.trustStore=/etc/ssl/speedscale/jks/cacerts.jks
-        -Djavax.net.ssl.trustStorePassword=changeit
     image: gcr.io/speedscale-demos/spaceboot:latest
     ports:
       - 8080:8080
-    volumes:
-      - ${HOME}/.speedscale/certs:/etc/ssl/speedscale/jks
   wiremock:
     image: wiremock/wiremock:3.1.0
     volumes:
-      - $PWD/test/resources:/home/wiremock
+      - $PWD/src/test/resources:/home/wiremock

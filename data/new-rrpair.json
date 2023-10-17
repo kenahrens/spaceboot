@@ -1,0 +1,115 @@
+{
+    "msgType": "rrpair",
+    "resource": "spaceboot",
+    "ts": "2023-10-06T20:57:13.160915778Z",
+    "isTls": true,
+    "l7protocol": "https",
+    "duration": 10,
+    "tags": {
+        "proxyLocation": "out",
+        "targetHost": "wiremock",
+        "targetPort": "8080"
+    },
+    "direction": "OUT",
+    "service": "spaceboot",
+    "network_address": "wiremock:8080",
+    "command": "GET",
+    "location": "/v5/launches/latest",
+    "status": "200",
+    "http": {
+        "req": {
+            "url": "/v5/launches/latest",
+            "uri": "/v5/launches/latest",
+            "version": "2.0",
+            "method": "GET",
+            "host": "wiremock"
+        },
+        "res": {
+            "contentType": "application/json; charset=utf-8",
+            "statusCode": 200,
+            "statusMessage": "200 OK",
+            "headers": {
+                "Date": [
+                    "Fri, 06 Oct 2023 12:59:50 GMT"
+                ],
+                "Content-Type": [
+                    "application/json; charset=utf-8"
+                ],
+                "access-control-allow-origin": [
+                    "*"
+                ],
+                "access-control-expose-headers": [
+                    "spacex-api-cache,spacex-api-response-time"
+                ],
+                "alt-svc": [
+                    "h3=\":443\"; ma=86400"
+                ],
+                "Cache-Control": [
+                    "max-age=20"
+                ],
+                "content-security-policy": [
+                    "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                ],
+                "etag": [
+                    "\"615-Ip/MG7g0l55a1XAv9G4c6VIZOA8\""
+                ],
+                "expect-ct": [
+                    "max-age=0"
+                ],
+                "referrer-policy": [
+                    "no-referrer"
+                ],
+                "spacex-api-cache": [
+                    "HIT"
+                ],
+                "spacex-api-cache-online": [
+                    "true"
+                ],
+                "spacex-api-response-time": [
+                    "0ms"
+                ],
+                "strict-transport-security": [
+                    "max-age=15552000; includeSubDomains"
+                ],
+                "vary": [
+                    "Origin",
+                    "Accept-Encoding"
+                ],
+                "x-content-type-options": [
+                    "nosniff"
+                ],
+                "x-dns-prefetch-control": [
+                    "off"
+                ],
+                "x-download-options": [
+                    "noopen"
+                ],
+                "x-frame-options": [
+                    "SAMEORIGIN"
+                ],
+                "x-permitted-cross-domain-policies": [
+                    "none"
+                ],
+                "x-xss-protection": [
+                    "0"
+                ],
+                "CF-Cache-Status": [
+                    "DYNAMIC"
+                ],
+                "Report-To": [
+                    "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=v8i57sJ8q%2BbHI0bxjfHXY0NbkhPUfdMq5vYtCeRgSPrqZu%2BHvzHmiTnkK6ljbijaJOjR1cSCs0tbfqUosQSQfvmL8ssI43VQAfXt4%2BOg8rXWHgyfaySUHjnejc97gy1PLdVP9jg%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+                ],
+                "NEL": [
+                    "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+                ],
+                "Server": [
+                    "cloudflare"
+                ],
+                "CF-RAY": [
+                    "811e1576abf0458f-ATL"
+                ]
+            },
+            "bodyBase64": "eyJmYWlyaW5ncyI6bnVsbCwibGlua3MiOnsicGF0Y2giOnsic21hbGwiOiJodHRwczovL2ltYWdlczIuaW1nYm94LmNvbS9lYi9kOC9EMVl5d3Awd19vLnBuZyIsImxhcmdlIjoiaHR0cHM6Ly9pbWFnZXMyLmltZ2JveC5jb20vMzMvMmUvazZWRTRpWWxfby5wbmcifSwicmVkZGl0Ijp7ImNhbXBhaWduIjpudWxsLCJsYXVuY2giOiJodHRwczovL3d3dy5yZWRkaXQuY29tL3Ivc3BhY2V4L2NvbW1lbnRzL3h2bTc2ai9yc3BhY2V4X2NyZXc1X2xhdW5jaGNvYXN0X2RvY2tpbmdfZGlzY3Vzc2lvbl9hbmQvIiwibWVkaWEiOm51bGwsInJlY292ZXJ5IjpudWxsfSwiZmxpY2tyIjp7InNtYWxsIjpbXSwib3JpZ2luYWwiOltdfSwicHJlc3NraXQiOm51bGwsIndlYmNhc3QiOiJodHRwczovL3lvdXR1LmJlLzVFd1c4WmtBckw0IiwieW91dHViZV9pZCI6IjVFd1c4WmtBckw0IiwiYXJ0aWNsZSI6bnVsbCwid2lraXBlZGlhIjoiaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU3BhY2VYX0NyZXctNSJ9LCJzdGF0aWNfZmlyZV9kYXRlX3V0YyI6bnVsbCwic3RhdGljX2ZpcmVfZGF0ZV91bml4IjpudWxsLCJuZXQiOmZhbHNlLCJ3aW5kb3ciOm51bGwsInJvY2tldCI6IjVlOWQwZDk1ZWRhNjk5NzNhODA5ZDFlYyIsInN1Y2Nlc3MiOnRydWUsImZhaWx1cmVzIjpbXSwiZGV0YWlscyI6bnVsbCwiY3JldyI6W3siY3JldyI6IjYyZGQ3MTk2MjAyMzA2MjU1MDI0ZDEzYyIsInJvbGUiOiJDb21tYW5kZXIifSx7ImNyZXciOiI2MmRkNzFjOTIwMjMwNjI1NTAyNGQxM2QiLCJyb2xlIjoiUGlsb3QifSx7ImNyZXciOiI2MmRkNzIxMDIwMjMwNjI1NTAyNGQxM2UiLCJyb2xlIjoiTWlzc2lvbiBTcGVjaWFsaXN0IDEifSx7ImNyZXciOiI2MmRkNzI1MzIwMjMwNjI1NTAyNGQxM2YiLCJyb2xlIjoiTWlzc2lvbiBTcGVjaWFsaXN0IDIifV0sInNoaXBzIjpbXSwiY2Fwc3VsZXMiOlsiNjE3YzA1NTkxYmFkMmM2NjFhNmUyOTA5Il0sInBheWxvYWRzIjpbIjYyZGQ3M2VkMjAyMzA2MjU1MDI0ZDE0NSJdLCJsYXVuY2hwYWQiOiI1ZTllNDUwMmY1MDkwOTQxODg1NjZmODgiLCJmbGlnaHRfbnVtYmVyIjoxODcsIm5hbWUiOiJDcmV3LTUiLCJkYXRlX3V0YyI6IjIwMjItMTAtMDVUMTY6MDA6MDAuMDAwWiIsImRhdGVfdW5peCI6MTY2NDk4NTYwMCwiZGF0ZV9sb2NhbCI6IjIwMjItMTAtMDVUMTI6MDA6MDAtMDQ6MDAiLCJkYXRlX3ByZWNpc2lvbiI6ImhvdXIiLCJ1cGNvbWluZyI6ZmFsc2UsImNvcmVzIjpbeyJjb3JlIjoiNjMzZDlkYTYzNWE3MWQxZDljNjY3OTdiIiwiZmxpZ2h0IjoxLCJncmlkZmlucyI6dHJ1ZSwibGVncyI6dHJ1ZSwicmV1c2VkIjpmYWxzZSwibGFuZGluZ19hdHRlbXB0Ijp0cnVlLCJsYW5kaW5nX3N1Y2Nlc3MiOnRydWUsImxhbmRpbmdfdHlwZSI6IkFTRFMiLCJsYW5kcGFkIjoiNWU5ZTMwMzMzODNlY2JiOWU1MzRlN2NjIn1dLCJhdXRvX3VwZGF0ZSI6dHJ1ZSwidGJkIjpmYWxzZSwibGF1bmNoX2xpYnJhcnlfaWQiOiJmMzNkNWVjZS1lODI1LTRjZDgtODA5Zi0xZDRjNzJhMmUwZDMiLCJpZCI6IjYyZGQ3MGQ1MjAyMzA2MjU1MDI0ZDEzOSJ9Cg=="
+        }
+    }
+}

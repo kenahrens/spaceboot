@@ -33,17 +33,27 @@ public class SpaceXTest {
                 .port(9081)
                 .notifier(new ConsoleNotifier(true))
         );
+        // wireMockServer.startRecording("https://api.spacexdata.com");
         wireMockServer.start();
     }
 
     @AfterEach
     void stopRecording() {
+        // wireMockServer.stopRecording();
         wireMockServer.stop();
     }
 
     @Test
     void getLaunches() throws Exception {
         mockMvc.perform(get("/space")
+                .contentType("application/json")
+            )
+            .andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
+    }
+
+    @Test
+    void getShip() throws Exception {
+        mockMvc.perform(get("/ship")
                 .contentType("application/json")
             )
             .andExpect(status().isOk()).andReturn().getResponse().getContentAsString();

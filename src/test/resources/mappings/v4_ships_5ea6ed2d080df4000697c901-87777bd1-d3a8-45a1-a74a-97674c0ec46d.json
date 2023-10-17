@@ -1,0 +1,43 @@
+{
+  "id" : "87777bd1-d3a8-45a1-a74a-97674c0ec46d",
+  "name" : "v4_ships_5ea6ed2d080df4000697c901",
+  "request" : {
+    "url" : "/v4/ships/5ea6ed2d080df4000697c901",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"last_ais_update\":null,\"legacy_id\":\"AMERICANCHAMPION\",\"model\":null,\"type\":\"Tug\",\"roles\":[\"Support Ship\",\"Barge Tug\"],\"imo\":7434016,\"mmsi\":367020820,\"abs\":571252,\"class\":7604342,\"mass_kg\":266712,\"mass_lbs\":588000,\"year_built\":1976,\"home_port\":\"Port of Los Angeles\",\"status\":\"\",\"speed_kn\":null,\"course_deg\":null,\"latitude\":null,\"longitude\":null,\"link\":\"https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/mmsi:367020820/imo:7434016/vessel:AMERICAN_CHAMPION\",\"image\":\"https://i.imgur.com/woCxpkj.jpg\",\"name\":\"American Champion\",\"active\":false,\"launches\":[\"5eb87cdeffd86e000604b330\",\"5eb87cdfffd86e000604b331\"],\"id\":\"5ea6ed2d080df4000697c901\"}",
+    "headers" : {
+      "Date" : "Tue, 17 Oct 2023 19:50:18 GMT",
+      "Content-Type" : "application/json; charset=utf-8",
+      "access-control-allow-origin" : "*",
+      "access-control-expose-headers" : "spacex-api-cache,spacex-api-response-time",
+      "alt-svc" : "h3=\":443\"; ma=86400",
+      "Cache-Control" : "max-age=300",
+      "content-security-policy" : "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+      "etag" : "\"28d-aOE8syxtab65e1/wR2qFYWh2dLg\"",
+      "expect-ct" : "max-age=0",
+      "referrer-policy" : "no-referrer",
+      "spacex-api-cache" : "HIT",
+      "spacex-api-cache-online" : "true",
+      "spacex-api-response-time" : "1ms",
+      "strict-transport-security" : "max-age=15552000; includeSubDomains",
+      "vary" : [ "Origin", "Accept-Encoding" ],
+      "x-content-type-options" : "nosniff",
+      "x-dns-prefetch-control" : "off",
+      "x-download-options" : "noopen",
+      "x-frame-options" : "SAMEORIGIN",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-xss-protection" : "0",
+      "CF-Cache-Status" : "DYNAMIC",
+      "Report-To" : "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=JF9t3xvFDRv6JU4EI57D3xxU3KdVkGjRPYPDiyuJKerGI4dnZ1RfaaiIktJ3UMrahjGnQzXf8e9Tqgx3p9BZzj64OuCyW47yv4XYwrV%2FVEYGfmciQnEy8tHaotAd2L%2B%2BjQU5hPk%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+      "NEL" : "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+      "Server" : "cloudflare",
+      "CF-RAY" : "817b11db2ee653d5-ATL"
+    }
+  },
+  "uuid" : "87777bd1-d3a8-45a1-a74a-97674c0ec46d",
+  "persistent" : true,
+  "insertionIndex" : 1
+}

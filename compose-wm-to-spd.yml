@@ -1,0 +1,32 @@
+services:
+  spaceboot:
+    environment:
+      - JAVA_TOOL_OPTIONS=
+        -Dspring.profiles.active=integration
+    image: gcr.io/speedscale-demos/spaceboot:latest
+    ports:
+      - 8080:8080
+  wiremock:
+    environment:
+    - SPEEDSCALE_CONFIG_YAML=/config.yaml
+    - REDIS_SERVICE_HOST=redis
+    - REDIS_SERVICE_PORT=6379
+    - SERVICE_HTTPS_PORT=443
+    - SERVICE_HTTP_PORT=8080
+    # https://app.speedscale.com/config
+    - TEST_CONFIG_ID=standard
+    # snapshot to source requests from
+    - SNAPSHOT_ID=81b0d05f-46ba-48b9-886f-99e52c993d01
+    image: gcr.io/speedscale/responder:v1.3.405
+    restart: always
+    volumes:
+    - ${HOME}/.speedscale/certs:/etc/ssl/speedscale
+    - ${HOME}/.speedscale/config.yaml:/config.yaml
+  redis:
+    environment:
+    - ALLOW_EMPTY_PASSWORD=yes
+    - REDIS_AOF_ENABLED=no
+    image: gcr.io/speedscale/redis
+    ports:
+    - 6379:6379
+    restart: always

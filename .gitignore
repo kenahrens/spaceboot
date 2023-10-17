@@ -1,6 +1,6 @@
 # Speedscale
 speedscale-docker-capture.yaml
-speedscale-docker-replay.yaml
+speedscale-docker-respond.yaml
 
 # Spring Boot
 HELP.md
